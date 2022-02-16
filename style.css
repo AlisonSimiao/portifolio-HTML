@@ -5,7 +5,7 @@
 }
 
 body {
-  --background-color: #FFF;
+  --background-color: #fff;
   --input-border-color: #979797;
   --color: #000;
   --shadow-color: 0px 4px 8px rgba(0, 0, 0, 0.15);
@@ -78,6 +78,8 @@ body {
   display: flex;
   align-items: center;
   gap: 24px;
+  overflow: hidden;
+  min-height: 300px;
 }
 
 .movies-container {
@@ -93,15 +95,17 @@ body {
   background-size: cover;
   background-position: center;
 
-  width: 168px;
-  height: 300px;
+  min-width: 168px;
+  min-height: 300px;
 
   display: flex;
   flex-direction: column;
 
   box-shadow: var(--shadow-color);
-
+  box-sizing: border-box;
   cursor: pointer;
+  color: #FDFDFD;
+  transition: .3s;
 }
 
 .movie__info {
@@ -115,7 +119,7 @@ body {
   padding: 10px 8px;
 }
 
-.movie__title {
+ .movie__title {
   font-family: 'Manrope', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -138,6 +142,10 @@ body {
   line-height: 150%;
 
   color: #FBCD6E;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .subtitle {
@@ -160,6 +168,11 @@ body {
 .highlight__video {
   width: 550px;
   height: 340px;
+
+  /* ajustar o background */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   display: flex;
   justify-content: center;
